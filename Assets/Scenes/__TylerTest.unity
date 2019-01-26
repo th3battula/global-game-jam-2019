@@ -198,7 +198,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1071140452, guid: db28b92b989a54140b0f931cccbbdd92, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 24.16
       objectReference: {fileID: 0}
     - target: {fileID: 1071140452, guid: db28b92b989a54140b0f931cccbbdd92, type: 3}
       propertyPath: m_LocalRotation.x
@@ -231,6 +231,16 @@ PrefabInstance:
     - target: {fileID: 1071140452, guid: db28b92b989a54140b0f931cccbbdd92, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369904113533528072, guid: db28b92b989a54140b0f931cccbbdd92,
+        type: 3}
+      propertyPath: gameController
+      value: 
+      objectReference: {fileID: 1849995872}
+    - target: {fileID: 8369904113533528072, guid: db28b92b989a54140b0f931cccbbdd92,
+        type: 3}
+      propertyPath: teleportTimerLength
+      value: 2000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db28b92b989a54140b0f931cccbbdd92, type: 3}
@@ -457,7 +467,7 @@ GameObject:
   m_Layer: 0
   m_Name: Home Marker
   m_TagString: Respawn
-  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
