@@ -34,19 +34,19 @@ static class ResourceInformation {
 
     private static ResourceInfoStruct SimpleFiberResourceInfo = new ResourceInfoStruct(ResourceList.SimpleFiber, ToolTypes.Knife, ResourceTypes.Fiber, 0, 100, 1);
     private static ResourceInfoStruct AdvancedFiberResourceInfo = new ResourceInfoStruct(ResourceList.AdvancedFiber, ToolTypes.Knife, ResourceTypes.Fiber, 1, 400, 1);
-    private static ResourceInfoStruct ReinforcedFiberResourceInfo = new ResourceInfoStruct(ResourceList.ReinforcedFiber, ToolTypes.Knife, ResourceTypes.Fiber, 1, 1000, 1); 
+    private static ResourceInfoStruct ReinforcedFiberResourceInfo = new ResourceInfoStruct(ResourceList.ReinforcedFiber, ToolTypes.Knife, ResourceTypes.Fiber, 1, 1000, 1);
 
     public static Dictionary<ResourceList, ResourceInfoStruct> resourceInfo = new Dictionary<ResourceList, ResourceInfoStruct> {
-    { ResourceList.Rock, RockResourceInfo }, 
-    { ResourceList.Sapling, SaplingResourceInfo }, 
-    { ResourceList.Hardwood, HardwoodResourceInfo }, 
-    { ResourceList.PetrifiedWood, PetrifiedWoodInfo }, 
-    { ResourceList.Flint, FlintResourceInfo }, 
-    { ResourceList.Stone, StoneResourceInfo }, 
-    { ResourceList.Metal, MetalResourceInfo }, 
-    { ResourceList.SimpleFiber, SimpleFiberResourceInfo }, 
-    { ResourceList.AdvancedFiber, AdvancedFiberResourceInfo }, 
-    { ResourceList.ReinforcedFiber, ReinforcedFiberResourceInfo }, 
+    { ResourceList.Rock, RockResourceInfo },
+    { ResourceList.Sapling, SaplingResourceInfo },
+    { ResourceList.Hardwood, HardwoodResourceInfo },
+    { ResourceList.PetrifiedWood, PetrifiedWoodInfo },
+    { ResourceList.Flint, FlintResourceInfo },
+    { ResourceList.Stone, StoneResourceInfo },
+    { ResourceList.Metal, MetalResourceInfo },
+    { ResourceList.SimpleFiber, SimpleFiberResourceInfo },
+    { ResourceList.AdvancedFiber, AdvancedFiberResourceInfo },
+    { ResourceList.ReinforcedFiber, ReinforcedFiberResourceInfo },
 };
 }
 
@@ -94,7 +94,10 @@ public class ResourceController : MonoBehaviour {
     }
 
     public void DestroyThis() {
-        DestroyImmediate(this.gameObject);
+        if (depletedState != null) {
+            GameObject.Instantiate(depletedState, transform.position, Quaternion.identity);
+        }
+        Destroy(this.gameObject);
     }
 }
 

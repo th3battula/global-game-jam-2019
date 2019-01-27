@@ -34,7 +34,7 @@ public enum ToolList {
     Torch,
 };
 
-static public class ToolInformation {
+public static class ToolInformation {
     private static ToolInfoStruct UnarmedInfo = new ToolInfoStruct(ToolList.Unarmed, ToolTypes.Unarmed, 0, 100);
     private static ToolInfoStruct RockInfo = new ToolInfoStruct(ToolList.Rock, ToolTypes.Rock, 0, 200);
     private static ToolInfoStruct TorchInfo = new ToolInfoStruct(ToolList.Torch, ToolTypes.Torch, 0, 300);

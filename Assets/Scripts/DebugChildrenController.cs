@@ -6,6 +6,16 @@ using System.Linq;
 public class DebugChildrenController : MonoBehaviour {
     [SerializeField] bool disableDebugChildren;
 
+    #if !UNITY_EDITOR
+    disableDebugChildren = true;
+    #endif
+
+    void Start() {
+        #if !UNITY_EDITOR
+        disableDebugChildren = true;
+        #endif
+    }
+
     void Update() {
         if (disableDebugChildren) {
             DisableDebugChildren();
