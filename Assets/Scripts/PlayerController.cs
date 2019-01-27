@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour {
         	LayerMask resourceMask = LayerMask.GetMask("Resource");
         	LayerMask waterMask = LayerMask.GetMask("Water");
         	RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 3, resourceMask)) {
+            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward), out hit, 3, resourceMask)) {
                 ResourceController resourceScript = hit.collider.gameObject.GetComponent<ResourceController>();
                 ResourceStruct resourceIncome = resourceScript.Interact(equippedTool);
                 Debug.Log("Received " + resourceIncome.count + " " + resourceIncome.type);

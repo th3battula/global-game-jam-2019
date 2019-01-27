@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 6625421189106367006}
   - component: {fileID: 8096090014733925689}
   - component: {fileID: 1857216071217158616}
-  - component: {fileID: 3556457341979245206}
   - component: {fileID: 6260520121237465163}
+  - component: {fileID: 3556457341979245206}
   m_Layer: 9
-  m_Name: Base Rock 1
+  m_Name: Base Rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,20 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &3556457341979245206
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3015691460518411916}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: d394cb8de1c8c3643878c67a81bff87a, type: 3}
 --- !u!114 &6260520121237465163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,3 +96,17 @@ MonoBehaviour:
   resource:
     type: 3
     count: 1
+--- !u!64 &3556457341979245206
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3015691460518411916}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: d394cb8de1c8c3643878c67a81bff87a, type: 3}
