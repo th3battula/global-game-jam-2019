@@ -11,7 +11,12 @@ public class GameController : MonoBehaviour {
     bool shouldGoHome = false;
 
     void Awake() {
-        DontDestroyOnLoad(this.gameObject);
+        GameObject[] gameControllers = GameObject.FindGameObjectsWithTag("GameController");
+        //TAB
+        Debug.Log("GameControllers in scene: " + gameControllers.Length);
+        if (gameControllers.Length <= 1) {
+            DontDestroyOnLoad(this.gameObject);
+        }
     }
 
     void OnEnable() {
