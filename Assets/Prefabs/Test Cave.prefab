@@ -40,14 +40,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 951274953}
-  m_LocalRotation: {x: -0.64865875, y: -0.28149924, z: 0.28149927, w: 0.64865875}
+  m_LocalRotation: {x: -0.6486585, y: -0.28149977, z: 0.28149977, w: 0.6486586}
   m_LocalPosition: {x: -0, y: -1.2, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 890519378}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -43.081, y: -90.00001, z: 90.00001}
 --- !u!33 &951274956
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -118,6 +118,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Test Cave Barrier
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 59880533e7852044d9abebf2608dd75b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 59880533e7852044d9abebf2608dd75b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0097258855
@@ -174,6 +178,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 59880533e7852044d9abebf2608dd75b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 020e73163b066a349b697f2cd0b99ad4, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59880533e7852044d9abebf2608dd75b, type: 3}
 --- !u!1 &890479474 stripped

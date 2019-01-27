@@ -2,8 +2,6 @@ using UnityEngine;
 using System.Timers;
 
 public class PlayerController : MonoBehaviour {
-
-    [SerializeField] GameController gameController;
     [SerializeField] Animator eyeAnimator;
     [SerializeField] float teleportTimerLength = 2000; // in ms
     [SerializeField] ToolList equippedToolId;
@@ -45,7 +43,7 @@ public class PlayerController : MonoBehaviour {
 
     void OnTeleportTimerElapsed(System.Object source, ElapsedEventArgs e) {
         didTeleport = true;
-        gameController.GoHome();
+        GameController.instance.GoHome();
         timer.Stop();
     }
 }

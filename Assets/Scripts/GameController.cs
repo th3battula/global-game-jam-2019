@@ -10,6 +10,10 @@ public class GameController : MonoBehaviour {
 
     bool shouldGoHome = false;
 
+    void Awake() {
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     void OnEnable() {
         instance = this;
     }
