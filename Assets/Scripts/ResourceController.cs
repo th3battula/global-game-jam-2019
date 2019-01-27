@@ -29,6 +29,7 @@ public class ResourceController : MonoBehaviour {
         this.durability -= damage;
         if (this.durability <= 0) {
             Debug.Log("is depleted");
+            InventoryController.instance.IncrementResource(resource.type, resource.count);
             DestroyThis();
             return resource;
         }
@@ -38,10 +39,6 @@ public class ResourceController : MonoBehaviour {
 
     public void DestroyThis() {
         DestroyImmediate(this.gameObject);
-    }
-
-    public string TestHit() {
-        return "Hit the object";
     }
 }
 

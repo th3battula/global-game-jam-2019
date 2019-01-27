@@ -3,16 +3,18 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
+    public static GameController instance = null;
+
     [SerializeField] Transform homeSpawn;
-    [SerializeField] GameObject player;
+    [SerializeField] PlayerController player;
 
     bool shouldGoHome = false;
 
-    private void Start() {
-        // SceneManager.LoadScene("Home");
+    void OnEnable() {
+        instance = this;
     }
 
-    private void Update() {
+    void Update() {
         if (shouldGoHome) {
             SceneManager.LoadScene("Home");
             shouldGoHome = false;
