@@ -18,6 +18,28 @@ public class PlayerController : MonoBehaviour {
     }
 
     void Update() {
+    	if(Input.GetKeyDown(KeyCode.Alpha1)) {
+    		ChangeEquippedTool(ToolList.Unarmed);
+    	};
+    	if(Input.GetKeyDown(KeyCode.Alpha2)) {
+    		ChangeEquippedTool(ToolList.Rock);
+    	};
+    	if(Input.GetKeyDown(KeyCode.Alpha3)) {
+    		ChangeEquippedTool(ToolList.SimpleKnife);
+    	};
+    	if(Input.GetKeyDown(KeyCode.Alpha4)) {
+    		ChangeEquippedTool(ToolList.SimpleAxe);
+    	};
+    	if(Input.GetKeyDown(KeyCode.Alpha5)) {
+    		ChangeEquippedTool(ToolList.SimplePickaxe);
+    	};
+    	if(Input.GetKeyDown(KeyCode.Alpha6)) {
+    		ChangeEquippedTool(ToolList.SimpleSpear);
+    	};
+    	if(Input.GetKeyDown(KeyCode.Alpha7)) {
+    		ChangeEquippedTool(ToolList.Torch);
+    	};
+
         if (Input.GetButtonDown("Interact")) {
             Debug.Log("Interact");
         	LayerMask resourceMask = LayerMask.GetMask("Resource");
@@ -45,5 +67,10 @@ public class PlayerController : MonoBehaviour {
         didTeleport = true;
         GameController.instance.GoHome();
         timer.Stop();
+    }
+
+    void ChangeEquippedTool(ToolList id) {
+    	equippedToolId = id;
+    	equippedTool = ToolInformation.ToolInfo[id];
     }
 }
