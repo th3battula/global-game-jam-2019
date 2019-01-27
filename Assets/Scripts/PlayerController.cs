@@ -19,11 +19,11 @@ public class PlayerController : MonoBehaviour {
 
     void Update() {
         if (Input.GetButtonDown("Interact")) {
+            Debug.Log("Interact");
         	LayerMask resourceMask = LayerMask.GetMask("Resource");
         	LayerMask waterMask = LayerMask.GetMask("Water");
         	RaycastHit hit;
-
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 2, resourceMask)) {
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 3, resourceMask)) {
                 ResourceController resourceScript = hit.collider.gameObject.GetComponent<ResourceController>();
                 ResourceStruct resourceIncome = resourceScript.Interact(equippedTool);
                 Debug.Log("Received " + resourceIncome.count + " " + resourceIncome.type);

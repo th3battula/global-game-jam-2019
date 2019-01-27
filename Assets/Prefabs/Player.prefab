@@ -395,7 +395,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14617072530b4024f8fe5e7ad0c6467b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameController: {fileID: 0}
   eyeAnimator: {fileID: 1659201844062714495}
   teleportTimerLength: 2000
 --- !u!1 &1204708523663824486
@@ -621,7 +620,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6502124321962655970
 Transform:
   m_ObjectHideFlags: 0
