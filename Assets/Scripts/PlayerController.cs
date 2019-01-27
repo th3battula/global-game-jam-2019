@@ -6,11 +6,14 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] GameController gameController;
     [SerializeField] Animator eyeAnimator;
     [SerializeField] float teleportTimerLength = 2000; // in ms
+    [SerializeField] ToolList equippedToolId;
+    ToolInfoStruct equippedTool;
     Timer timer;
 
     bool didTeleport;
 
     void Start() {
+    	equippedTool = ToolInformation.ToolInfo[equippedToolId];
         timer = new Timer(teleportTimerLength);
         timer.AutoReset = false;
         timer.Elapsed += OnTeleportTimerElapsed;
@@ -21,10 +24,10 @@ public class PlayerController : MonoBehaviour {
         	LayerMask resourceMask = LayerMask.GetMask("Resource");
         	LayerMask waterMask = LayerMask.GetMask("Water");
         	RaycastHit hit;
+
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 2, resourceMask)) {
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
                 ResourceController resourceScript = hit.collider.gameObject.GetComponent<ResourceController>();
-                ResourceStruct resourceIncome = resourceScript.Interact(100);
+                ResourceStruct resourceIncome = resourceScript.Interact(equippedTool);
                 Debug.Log("Received " + resourceIncome.count + " " + resourceIncome.type);
             }
         }
