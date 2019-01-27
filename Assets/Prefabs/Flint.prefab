@@ -91,11 +91,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71728fdb049c56f47bc7f70b1976d415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  durability: 100
+  resourceId: 4
   depletedState: {fileID: 0}
-  resource:
-    type: 4
-    count: 1
 --- !u!64 &6729523581329442752
 MeshCollider:
   m_ObjectHideFlags: 0
