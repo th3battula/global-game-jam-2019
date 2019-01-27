@@ -35,29 +35,89 @@ public enum ToolList {
 };
 
 public static class ToolInformation {
-    private static ToolInfoStruct UnarmedInfo = new ToolInfoStruct(ToolList.Unarmed, ToolTypes.Unarmed, 0, 100);
-    private static ToolInfoStruct RockInfo = new ToolInfoStruct(ToolList.Rock, ToolTypes.Rock, 0, 200);
-    private static ToolInfoStruct TorchInfo = new ToolInfoStruct(ToolList.Torch, ToolTypes.Torch, 0, 300);
+    private static ToolInfoStruct UnarmedInfo = new ToolInfoStruct(ToolList.Unarmed, ToolTypes.Unarmed, 0, 100, null);
+    private static ToolInfoStruct RockInfo = new ToolInfoStruct(ToolList.Rock, ToolTypes.Rock, 0, 200, null);
+    private static ToolInfoStruct TorchInfo = new ToolInfoStruct(ToolList.Torch, ToolTypes.Torch, 0, 300, new Dictionary<ResourceList, int>() {
+        { ResourceList.Sapling, 1 },
+        { ResourceList.SimpleFiber, 1 },
+        { ResourceList.Flint, 1 },
+    });
 
-    private static ToolInfoStruct SimpleKnifeInfo = new ToolInfoStruct(ToolList.SimpleKnife, ToolTypes.Knife, 0, 100);
-    private static ToolInfoStruct AdvancedKnifeInfo = new ToolInfoStruct(ToolList.AdvancedKnife, ToolTypes.Knife, 1, 200);
-    private static ToolInfoStruct SuperiorKnifeInfo = new ToolInfoStruct(ToolList.SuperiorKnife, ToolTypes.Knife, 2, 400);
+    private static ToolInfoStruct SimpleKnifeInfo = new ToolInfoStruct(ToolList.SimpleKnife, ToolTypes.Knife, 0, 100, new Dictionary<ResourceList, int>() {
+        { ResourceList.SimpleFiber, 1 },
+        { ResourceList.Flint, 1 },
+    });
+    private static ToolInfoStruct AdvancedKnifeInfo = new ToolInfoStruct(ToolList.AdvancedKnife, ToolTypes.Knife, 1, 200, new Dictionary<ResourceList, int>() {
+        { ResourceList.AdvancedFiber, 1 },
+        { ResourceList.Stone, 1 },
+    });
+    private static ToolInfoStruct SuperiorKnifeInfo = new ToolInfoStruct(ToolList.SuperiorKnife, ToolTypes.Knife, 2, 400, new Dictionary<ResourceList, int>() {
+        { ResourceList.ReinforcedFiber, 1 },
+        { ResourceList.Metal, 1 },
+    });
 
-    private static ToolInfoStruct SimpleAxeInfo = new ToolInfoStruct(ToolList.SimpleAxe, ToolTypes.Axe, 0, 100);
-    private static ToolInfoStruct AdvancedAxeInfo = new ToolInfoStruct(ToolList.AdvancedAxe, ToolTypes.Axe, 1, 200);
-    private static ToolInfoStruct SuperiorAxeInfo = new ToolInfoStruct(ToolList.SuperiorAxe, ToolTypes.Axe, 2, 400);
+    private static ToolInfoStruct SimpleAxeInfo = new ToolInfoStruct(ToolList.SimpleAxe, ToolTypes.Axe, 0, 100, new Dictionary<ResourceList, int>() {
+        { ResourceList.Sapling, 1 },
+        { ResourceList.SimpleFiber, 1 },
+        { ResourceList.Flint, 1 },
+    });
+    private static ToolInfoStruct AdvancedAxeInfo = new ToolInfoStruct(ToolList.AdvancedAxe, ToolTypes.Axe, 1, 200, new Dictionary<ResourceList, int>() {
+        { ResourceList.Hardwood, 1 },
+        { ResourceList.AdvancedFiber, 1 },
+        { ResourceList.Stone, 1 },
+    });
+    private static ToolInfoStruct SuperiorAxeInfo = new ToolInfoStruct(ToolList.SuperiorAxe, ToolTypes.Axe, 2, 400, new Dictionary<ResourceList, int>() {
+        { ResourceList.PetrifiedWood, 1 },
+        { ResourceList.ReinforcedFiber, 1 },
+        { ResourceList.Metal, 1 },
+    });
 
-    private static ToolInfoStruct SimplePickaxeInfo = new ToolInfoStruct(ToolList.SimplePickaxe, ToolTypes.Pickaxe, 0, 100);
-    private static ToolInfoStruct AdvancedPickaxeInfo = new ToolInfoStruct(ToolList.AdvancedPickaxe, ToolTypes.Pickaxe, 1, 200);
-    private static ToolInfoStruct SuperiorPickAxeInfo = new ToolInfoStruct(ToolList.SuperiorPickAxe, ToolTypes.Pickaxe, 2, 400);
+    private static ToolInfoStruct SimplePickaxeInfo = new ToolInfoStruct(ToolList.SimplePickaxe, ToolTypes.Pickaxe, 0, 100, new Dictionary<ResourceList, int>() {
+        { ResourceList.Sapling, 1 },
+        { ResourceList.SimpleFiber, 1 },
+        { ResourceList.Flint, 1 },
+    });
+    private static ToolInfoStruct AdvancedPickaxeInfo = new ToolInfoStruct(ToolList.AdvancedPickaxe, ToolTypes.Pickaxe, 1, 200, new Dictionary<ResourceList, int>() {
+        { ResourceList.Hardwood, 1 },
+        { ResourceList.AdvancedFiber, 1 },
+        { ResourceList.Stone, 1 },
+    });
+    private static ToolInfoStruct SuperiorPickAxeInfo = new ToolInfoStruct(ToolList.SuperiorPickAxe, ToolTypes.Pickaxe, 2, 400, new Dictionary<ResourceList, int>() {
+        { ResourceList.PetrifiedWood, 1 },
+        { ResourceList.ReinforcedFiber, 1 },
+        { ResourceList.Metal, 1 },
+    });
 
-    private static ToolInfoStruct SimpleSpearInfo = new ToolInfoStruct(ToolList.SimpleSpear, ToolTypes.Spear, 0, 100);
-    private static ToolInfoStruct AdvancedSpearInfo = new ToolInfoStruct(ToolList.AdvancedSpear, ToolTypes.Spear, 1, 200);
-    private static ToolInfoStruct SuperiorSpearInfo = new ToolInfoStruct(ToolList.SuperiorSpear, ToolTypes.Spear, 2, 400);
-
-    private static ToolInfoStruct SimpleBowInfo = new ToolInfoStruct(ToolList.SimpleBow, ToolTypes.Bow, 0, 100);
-    private static ToolInfoStruct AdvancedBowInfo = new ToolInfoStruct(ToolList.AdvancedBow, ToolTypes.Bow, 1, 200);
-    private static ToolInfoStruct SuperiorBowInfo = new ToolInfoStruct(ToolList.SuperiorBow, ToolTypes.Bow, 2, 400);
+    private static ToolInfoStruct SimpleSpearInfo = new ToolInfoStruct(ToolList.SimpleSpear, ToolTypes.Spear, 0, 100, new Dictionary<ResourceList, int>() {
+        { ResourceList.Sapling, 1 },
+        { ResourceList.SimpleFiber, 1 },
+        { ResourceList.Flint, 1 },
+    });
+    private static ToolInfoStruct AdvancedSpearInfo = new ToolInfoStruct(ToolList.AdvancedSpear, ToolTypes.Spear, 1, 200, new Dictionary<ResourceList, int>() {
+        { ResourceList.Hardwood, 1 },
+        { ResourceList.AdvancedFiber, 1 },
+        { ResourceList.Stone, 1 },
+    });
+    private static ToolInfoStruct SuperiorSpearInfo = new ToolInfoStruct(ToolList.SuperiorSpear, ToolTypes.Spear, 2, 400, new Dictionary<ResourceList, int>() {
+        { ResourceList.PetrifiedWood, 1 },
+        { ResourceList.ReinforcedFiber, 1 },
+        { ResourceList.Metal, 1 },
+    });
+    private static ToolInfoStruct SimpleBowInfo = new ToolInfoStruct(ToolList.SimpleSpear, ToolTypes.Spear, 0, 100, new Dictionary<ResourceList, int>() {
+        { ResourceList.Sapling, 1 },
+        { ResourceList.SimpleFiber, 1 },
+        { ResourceList.Flint, 1 },
+    });
+    private static ToolInfoStruct AdvancedBowInfo = new ToolInfoStruct(ToolList.AdvancedSpear, ToolTypes.Spear, 1, 200, new Dictionary<ResourceList, int>() {
+        { ResourceList.Hardwood, 1 },
+        { ResourceList.AdvancedFiber, 1 },
+        { ResourceList.Stone, 1 },
+    });
+    private static ToolInfoStruct SuperiorBowInfo = new ToolInfoStruct(ToolList.SuperiorSpear, ToolTypes.Spear, 2, 400, new Dictionary<ResourceList, int>() {
+        { ResourceList.PetrifiedWood, 1 },
+        { ResourceList.ReinforcedFiber, 1 },
+        { ResourceList.Metal, 1 },
+    });
 
     public static Dictionary<ToolList, ToolInfoStruct> ToolInfo = new Dictionary<ToolList, ToolInfoStruct>() {
         { ToolList.Unarmed, UnarmedInfo },
@@ -121,7 +181,15 @@ public class InventoryController : MonoBehaviour {
         inventory.resources.TryGetValue(resourceId, out newValue);
 
         inventory.resources[resourceId] = newValue + amount;
-        //TAB
+        string inventoryString = inventory.ToString();
+        Debug.Log("new inventory: " + inventoryString);
+    }
+
+    public void CraftItem(ToolTypes toolId, int amount) {
+        int newValue = 0;
+        inventory.tools.TryGetValue(toolId, out newValue);
+
+        inventory.tools[toolId] = amount;
         string inventoryString = inventory.ToString();
         Debug.Log("new inventory: " + inventoryString);
     }
@@ -163,13 +231,23 @@ public struct Inventory {
 public struct ToolInfoStruct {
     public ToolList id;
     public ToolTypes type;
+    public Dictionary<ResourceList, int> recipe;
     public int tier;
     public int damage;
 
-    public ToolInfoStruct(ToolList newId, ToolTypes newType, int newTier, int newDamage) {
+    public ToolInfoStruct(ToolList newId, ToolTypes newType, int newTier, int newDamage, Dictionary<ResourceList, int> newRecipe) {
         id = newId;
         type = newType;
         tier = newTier;
         damage = newDamage;
+        recipe = newRecipe;
+    }
+
+    public string GetRecipeString() {
+        string recipeString = "";
+        foreach (KeyValuePair<ResourceList, int> kvp in recipe) {
+            recipeString += string.Format("{0} x {1}\n", kvp.Key, kvp.Value);
+        }
+        return recipeString;
     }
 }

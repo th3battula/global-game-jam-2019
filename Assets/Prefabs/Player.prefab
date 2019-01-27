@@ -400,7 +400,6 @@ MonoBehaviour:
   eyeAnimator: {fileID: 1659201844062714495}
   teleportTimerLength: 2000
   equippedToolId: 0
---- !u!114 &3766797936252319163
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
